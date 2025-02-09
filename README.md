@@ -7,6 +7,7 @@
 3. Delete all files in `/etc/yum.repo.d/*` on managed nodes.
 4. Configure the `/etc/hosts` file on the control node.
 5. set up no password sudo and copy SSH keys using `ssh-copy-id`.
+6. set up your VM user is `rocky:rocky`
 
 | hostname |        FQDN         |   IP address   |
 |:--------:|:-------------------:|:--------------:|
