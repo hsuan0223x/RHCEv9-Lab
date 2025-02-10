@@ -1,0 +1,17 @@
+- name: q1
+  hosts: all
+  tasks:
+    - name: Add BaseOS repo
+      ansible.builtin.yum_repository:
+        name: "EX294_BASE"
+        description: "EX294 base software"
+        baseurl: https://download.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/
+        gpgcheck: no
+        enabled: yes
+    - name: Add AppStream repo
+      ansible.builtin.yum_repository:
+        name: "EX294_STREAM"
+        description: "EX294 stream software"
+        baseurl: https://download.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/
+        gpgcheck: no
+        enabled: yes

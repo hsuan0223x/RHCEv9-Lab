@@ -1,0 +1,22 @@
+- name: q3-1
+  hosts: dev,test,prod
+  tasks:
+    - name: Install a list of packages with a list variable
+      ansible.builtin.yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+        - php
+        - mariadb
+
+- name: q3-2
+  hosts: dev
+  tasks:
+    - name: Install the 'RPM Development tools' package group
+      ansible.builtin.yum:
+        name: "@RPM Development tools"
+        state: present
+    - name: Upgrade All Packages
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
