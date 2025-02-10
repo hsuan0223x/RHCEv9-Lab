@@ -1,6 +1,6 @@
 # Question 2
 
-## setup yum repo
+## Setup yum Repo
 
 As a system administrator, you need to install software on managed nodes.
 

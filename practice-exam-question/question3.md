@@ -1,6 +1,6 @@
 # Question 3
 
-## download package
+## Download Package
 
 Create a playbook named `packages.yml`:
 

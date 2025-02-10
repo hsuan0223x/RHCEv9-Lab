@@ -1,6 +1,6 @@
 # Question 1
 
-## setup ansible file
+## Setup Ansible File
 
 Install and configure Ansible on the control node `control` as follows:
 

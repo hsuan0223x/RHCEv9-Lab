@@ -1,0 +1,4 @@
+- src: https://github.com/hsuan0223x/phpinfo.git
+  name: phpinfo
+- src: https://github.com/hsuan0223x/balancer.git
+  name: balancer
