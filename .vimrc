@@ -1,0 +1,1 @@
+set nu ts=2 sw=2 et cuc cul ai mouse=a
