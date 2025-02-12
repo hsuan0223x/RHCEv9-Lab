@@ -1,0 +1,7 @@
+- name: Create a greeting for each node
+  hosts: all
+  tasks:
+    - name: setup the greeting from jinja template
+      ansible.builtin.template:
+        src: templates/motd.j2
+        dest: /etc/motd
