@@ -17,3 +17,9 @@
 |  node3   |  node3.example.com  | 192.168.10.103 |
 |  node4   |  node4.example.com  | 192.168.10.104 |
 |  node5   |  node5.example.com  | 192.168.10.105 |
+
+## Reference sources
+
+[GitHub - RedHatRanger - RHCE9Vagrant](https://github.com/RedHatRanger/RHCE9Vagrant)
+[HackMD - Adam Hsu - RHCE 解題流程](https://hackmd.io/@adam44/rhce)
+[CSDN - Carlos Zhang - RHCE 9版本考试资料 ](https://blog.csdn.net/weixin_45603370/article/details/135032460)

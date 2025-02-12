@@ -1,0 +1,41 @@
+# ansible-playbook q16-ans.yml
+- name: make some lvms
+  hosts: all
+  tasks:
+    - name: Check if VG exists
+      ansible.builtin.debug:
+        msg: "Volume Group research not found."
+      when: ansible_lvm.vgs.research is not defined
+
+    - block:
+        - name: Create logical volume of 1500 MiB
+          community.general.lvol:
+            vg: research
+            lv: data
+            size: 1500M
+            force: yes
+          register: lv_result
+          when: ansible_lvm.vgs.research is defined
+
+        - name: Assign ext4 filesystem to logical volume
+          community.general.filesystem:
+            fstype: ext4
+            dev: /dev/research/data
+          when: lv_result.changed
+
+      rescue:
+        - name: Debug message if 1500 MiB volume could not be created
+          debug:
+            msg: "Could not create a logical volume of that size. Using 800 MiB instead."
+
+        - name: Create logical volume of 800 MiB
+          community.general.lvol:
+            vg: research
+            lv: data
+            size: 800M
+            force: yes
+
+        - name: Assign ext4 filesystem to fallback logical volume
+          community.general.filesystem:
+            fstype: ext4
+            dev: /dev/research/data
