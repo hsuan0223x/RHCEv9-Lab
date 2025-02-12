@@ -1,14 +1,15 @@
-11. Download file "https://github.com/hsuan0223x/RHCEv9-Lab/blob/main/practice-exam-question/files/myhosts.j2"
+# Question 11
 
-  1) myhosts.j2 is having the content:
-        ```
+Download file "https://github.com/hsuan0223x/RHCEv9-Lab/blob/main/practice-exam-question/files/myhosts.j2"
+
+ - myhosts.j2 is having the content:  
+        
+       
        127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4  
        ::1 localhost localhost.localdomain localhost6 localhost.localdomain6
-        ```
 
-  ii) The file should collect all node information like ipaddress,fqdn,hostname
-       and it should be same as `/etc/hosts` file,
-       if playbook is run on all the managed nodes it must store in `/etc/myhosts`.
+- The file should collect all node information like ipaddress,fqdn,hostname and it should be same as `/etc/hosts` file,  
+  if playbook is run on all the managed nodes it must store in `/etc/myhosts`.
 
 Finally /etc/myhosts should like as below:
 ```
@@ -23,4 +24,4 @@ Finally /etc/myhosts should like as below:
 192.168.10.105   node5.example.com     node5
 ```
 
-iii) The playbook name should be "hosts.yml" and run it on dev group.
+- The playbook name should be `hosts.yml` and run it on dev group.
