@@ -1,35 +1,24 @@
 # ansible-playbook q8-ans.yml
-- name: webcontent playbook
-  hosts: webservers
+- name: Create web directory
+  hosts: dev
+  roles:
+  - apache
   tasks:
-    - name: Ensure group webdev exists
-      group:
-        name: webdev
-        state: present
-    - name: create a /webdev direectory
-      file:
-        path: /webdev
-        state: directory
-        group: webdev
-        mode: 2775
-        setype: httpd_sys_content_t
+  - name: Give insecure permissions to an existing file
+    ansible.builtin.file:
+      path: /webdev
+      state: directory
+      group: wheel
+      mode: '2775'
 
-    - name: create symbolic link
-      file:
-        src: /webdev
-        dest: /var/www/html/webdev
-        state: link
-        force: yes
-    
-    - name: copy using inline content
-      copy:
-        content: "Development"
-        dest: /webdev/index.html
-        setype: httpd_sys_content_t
-    
-    - name: allow http traffic
-      ansible.posix.firewalld:
-        service: http
-        permanent: true
-        immediate: true
-        state: enabled
+  - name: Create a symbolic link
+    ansible.builtin.file:
+      src: /webdev
+      dest: /var/www/html/webdev
+      state: link
+
+  - name: Copy file content
+    ansible.builtin.copy:
+      dest: /webdev/index.html
+      content: 'Development'
+      setype: httpd_sys_content_t
