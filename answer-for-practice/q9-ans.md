@@ -5,7 +5,7 @@
   tasks:
     - name: Download foo.conf
       ansible.builtin.get_url:
-        url: https://raw.githubusercontent.com/RedHatRanger/RHCE9Vagrant/main/rhce-practice-questions/golden_files/hwreport.txt
+        url: https://raw.githubusercontent.com/hsuan0223x/RHCEv9-Lab/refs/heads/main/practice-exam-question/files/hwreport.txt
         dest: /root/hwreport.txt
         mode: '0755'
 
