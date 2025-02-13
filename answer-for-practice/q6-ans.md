@@ -56,5 +56,6 @@ $ vim apache_role.yml
 5. run and test this playbook
 ```
 $ ansible-playbook apache_role.yml
-$ curl node5
+$ curl node3
+$ curl node4
 ```
