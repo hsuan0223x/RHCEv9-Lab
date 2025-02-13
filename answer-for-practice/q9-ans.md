@@ -28,5 +28,5 @@
 ```
 2. test
 ```shell
-$ ansible all -m shell -a "cat /root/hwreport.txt; echo ' '"
+$ ansible all -m shell -a "cat /root/hwreport.txt"
 ```
