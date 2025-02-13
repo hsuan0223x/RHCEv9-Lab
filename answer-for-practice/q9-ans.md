@@ -3,7 +3,7 @@
 - name: Generate a hw report
   hosts: all
   tasks:
-    - name: Download foo.conf
+    - name: Download hwreport
       ansible.builtin.get_url:
         url: https://raw.githubusercontent.com/hsuan0223x/RHCEv9-Lab/refs/heads/main/practice-exam-question/files/hwreport.txt
         dest: /root/hwreport.txt
