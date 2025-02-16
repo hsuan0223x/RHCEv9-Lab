@@ -1,3 +1,9 @@
+```j2
+# myhosts.j2
+
+
+```
+
 ```yaml
 - name: Generate an /etc/myhosts file for dev only
   hosts: all
