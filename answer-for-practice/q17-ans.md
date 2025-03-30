@@ -23,5 +23,5 @@ $ cp -rf /usr/share/ansible/roles/rhel-system-roles.timesync ~/ansible/roles
 5. run and test playbook
 ```shell
 $ ansible-playbook timesync.yml
-$ ansible all -m shell -a "/etc/chrony.conf"
+$ ansible all -m shell -a "cat /etc/chrony.conf"
 ```
