@@ -15,7 +15,7 @@ $ cp -rf /usr/share/ansible/roles/rhel-system-roles.timesync ~/ansible/roles
 - hosts: all
   vars:
     timesync_ntp_servers:
-      - hostname: 172.28.128.100
+      - hostname: time.cloudflare.com
         iburst: yes
   roles:
     - rhel-system-roles.timesync
