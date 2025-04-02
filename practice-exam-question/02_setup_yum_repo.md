@@ -12,10 +12,12 @@ Repository 1:
 - Repository Name: EX294_BASE
 - Description: EX294 base software
 - Base URL: https://download.rockylinux.org/pub/rocky/9/BaseOS/x86_64/os/
+- GPGkey: https://download.rockylinux.org/pub/rocky/RPM-GPG-KEY-rockyofficial
 - Repository Status: Enabled
 
 Repository 2:
 - Repository Name: EX294_STREAM
 - Description: EX294 stream software
 - Base URL: https://download.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/
+- GPGkey: https://download.rockylinux.org/pub/rocky/RPM-GPG-KEY-rockyofficial
 - Repository Status: Enabled
