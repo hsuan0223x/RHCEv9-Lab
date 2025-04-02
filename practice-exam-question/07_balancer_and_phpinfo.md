@@ -4,6 +4,6 @@
 
 Please complete this task according to the following conditions.
 
-- Create `/home/rocky/ansible/roles.yml` file.
+- Create `roles.yml` file.
 - The role of `balancer` is load balancing.
-- The role of `phpinfo` is to display the PHP version and provide access to [FQDN]/hello.php.
+- The role of `phpinfo` is to display the PHP version and provide access to [node]/hello.php.
